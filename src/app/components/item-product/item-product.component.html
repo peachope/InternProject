@@ -1,0 +1,18 @@
+<div class="item ml-2">
+    <h3>
+        <a [routerLink]="['/products', product.id]">
+            <div class="image-product">
+                <img [src]="product.image" alt="">
+                <div class="icons">
+                    <i class="far fa-heart"></i>
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <span [routerLink]="['/products', product.id]" class="name-product">{{product.name}}</span>
+        </a>
+    </h3>
+    <span class="category" style="font-size: 14px;">{{product.category}}</span>
+    <span class="price" style="display: block; color:green;font-weight: 700; font-size: 17px;">{{product.price| currency :"VND"}}</span>
+    
+</div>

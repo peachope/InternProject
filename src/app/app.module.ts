@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,10 +14,13 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { FilterComponent } from './components/filter/filter.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { PolocyShopComponent } from './shared/polocy-shop/polocy-shop.component';
+import { NewProductComponent } from './components/new-product/new-product.component';
+import { ItemProductComponent } from './components/item-product/item-product.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
-
+    
     HeaderComponent,
     HomeComponent,
     CarouselComponent,
@@ -26,11 +29,15 @@ import { PolocyShopComponent } from './shared/polocy-shop/polocy-shop.component'
     ViewonComponent,
     CategoriesComponent,
     FilterComponent,
-    PolocyShopComponent
+    PolocyShopComponent,
+    NewProductComponent,
+    ItemProductComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     CarouselModule
 
