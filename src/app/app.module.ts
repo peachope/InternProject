@@ -16,11 +16,16 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { PolocyShopComponent } from './shared/polocy-shop/polocy-shop.component';
 import { NewProductComponent } from './components/new-product/new-product.component';
 import { ItemProductComponent } from './components/item-product/item-product.component';
-import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+
+import { BannerHomeComponent } from './components/banner-home/banner-home.component';
+import { BestSellerComponent } from './components/best-seller/best-seller.component';
+import { BlogsComponent } from './components/blogs/blogs.component';
+import { BackFridayComponent } from './components/back-friday/back-friday.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 @NgModule({
   declarations: [
     AppComponent,
-    
     HeaderComponent,
     HomeComponent,
     CarouselComponent,
@@ -32,7 +37,12 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     PolocyShopComponent,
     NewProductComponent,
     ItemProductComponent,
-    ProductDetailComponent
+    BannerHomeComponent,
+    BestSellerComponent,
+    BlogsComponent,
+    BackFridayComponent,
+    FooterComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

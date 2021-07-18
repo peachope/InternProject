@@ -57,6 +57,9 @@ export class NewProductComponent implements OnInit {
       },
       940: {
         items: 5
+      },
+      1024:{
+        items:5,
       }
     },
     

@@ -1,3 +1,5 @@
+@import '../../../assets/variable';
+@import '../../../assets/mixin';
 a {
     text-decoration: none;
     color: #222;
@@ -10,6 +12,18 @@ a {
 
 .item {
     margin-bottom: 30px;
+    box-shadow:0px 0px 5.95px 1.05px rgba(0,0,0,0.06) ;
+    &:hover{
+
+        .image-product{
+            .icons{
+               
+               
+                opacity: 1;
+            }
+        }
+      
+    }
     h3 {
         font-size: 1.0714em;
         color: #222;
@@ -17,58 +31,71 @@ a {
         span.name-product {
             display: block;
             text-align: center;
+            font-size: 15px;
+            @include change-color;
         }
+       
+        
     }
     .image-product {
         background: #F8F8F8;
         width: 200px;
         height: 200px;
-        position: relative;
         transition: all 0.3s ease-in;
         img {
-            position: absolute;
-            opacity: 1;
             top:0;
             left:0;
             width: 200px;
+            
         }
         .icons{
            position: absolute;
-           bottom: 0px;
-           
-           left:0;
+           right: 10px;
+           box-shadow:0px 0px 5.95px 1.05px rgba(0,0,0,0.06) ;
+           top:20px;
            opacity: 0;
-           width: 90%;
-           transform: translate(-50%,-30px);
-           padding: 10px 0;
            display: flex;
            justify-content: center;
-           background: #F8F8F8;
+           flex-direction: column;
+           background:#F8F8F8;
+           border: 1px solid $primary-color;
+           padding:20px 8px;
            z-index: 3;
            border-radius: 25px;
+           transition:all 0.3s ease-in ;
            i{
-               padding: 0px 10px;
+               display: block;
+               width: 20px;
+               height: 20px;
+               text-align:center;
+               
+               font-size: 16px;
+              
+               transition:all 0.3s ease-in ;
+               color:$primary-color;
+               &:hover{
+                   color:#F58505;
+                   
+               }
            }
         }
-        &:hover{
-            .icons{
-              
-                transform: translateY(-30px);
-                opacity: 1;
-            }
-        }
+       
     }
     span {
         display: block;
+        
         text-align: center;
     }
     .category {
         color: #666666;
         opacity: 0.7;
         transition: 0.35s all ease-in;
+       
         &:hover {
             color: green;
         }
     }
-    
+    .price{
+        padding: 5px 0 15px;
+    }
 }
